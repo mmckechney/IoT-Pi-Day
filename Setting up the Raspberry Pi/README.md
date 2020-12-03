@@ -71,22 +71,22 @@ Locate the IP address which has been assigned by your DHCP server to the Raspber
     - **```sudo apt-get -y update```**
 
 ## Install .Net Core Runtime 5.0
-
+https://dotnet.microsoft.com/download/dotnet/5.0
 The following commands need to be run on the Raspberry Pi whilst connected over an SSH session.
 
 > Note: This will use the apt-get package manager to install three prerequiste packages.
 1) **```sudo apt-get -y install libunwind8 gettext```**
 
-2) **```wget https://download.visualstudio.microsoft.com/download/pr/27840e8b-d61c-472d-8e11-c16784d40091/ae9780ccda4499405cf6f0924f6f036a/dotnet-sdk-5.0.100-linux-arm64.tar.gz```**
+2) **```wget https://download.visualstudio.microsoft.com/download/pr/e8912d3b-483b-4d6f-bd3a-3066b3194313/20f2261fe4e16e55df4bbe03c65a7648/dotnet-sdk-5.0.100-linux-arm.tar.gz```**
 
-3) **```wget https://download.visualstudio.microsoft.com/download/pr/ac555882-afa3-4f5b-842b-c4cec2ae0e90/84cdd6d47a9f79b6722f0e0a9b258888/aspnetcore-runtime-5.0.0-linux-arm64.tar.gz```**
+3) **```wget https://download.visualstudio.microsoft.com/download/pr/1c5366e8-9b74-4017-96ae-47fc08832c22/504aed87590bd99c49d053bc6f980b6b/aspnetcore-runtime-5.0.0-linux-arm.tar.gz ```**
 
 4) **```sudo mkdir /opt/dotnet```**
 
-5) **```sudo tar -xvf dotnet-sdk-5.0.100-linux-arm64.tar.gz -C /opt/dotnet/```**
+5) **```sudo tar -xvf dotnet-sdk-5.0.100-linux-arm.tar.gz -C /opt/dotnet/```**
 
 > Note: This creates a destination folder and extract the downloaded package into it.
-6) **```sudo tar -xvf aspnetcore-runtime-5.0.0-linux-arm64.tar.gz -C /opt/dotnet/```**
+6) **```sudo tar -xvf aspnetcore-runtime-5.0.0-linux-arm.tar.gz -C /opt/dotnet/```**
 
 > Note: This sets up a symbolic link.
 7) **```sudo ln -s /opt/dotnet/dotnet /usr/local/bin```**
